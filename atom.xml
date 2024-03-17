@@ -3,11 +3,11 @@
   <title>你好</title>
   
   <subtitle>田的博客</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://github.com/tianzhihao123456/hexo.github.io.git/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://github.com/tianzhihao123456/hexo.github.io.git/"/>
   <updated>1985-10-26T08:15:00.000Z</updated>
-  <id>http://example.com/</id>
+  <id>https://github.com/tianzhihao123456/hexo.github.io.git/</id>
   
   <author>
     <name>xt</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2024/03/17/hello-world/"/>
-    <id>http://example.com/2024/03/17/hello-world/</id>
+    <link href="https://github.com/tianzhihao123456/hexo.github.io.git/2024/03/17/hello-world/"/>
+    <id>https://github.com/tianzhihao123456/hexo.github.io.git/2024/03/17/hello-world/</id>
     <published>2024-03-17T01:20:06.048Z</published>
     <updated>1985-10-26T08:15:00.000Z</updated>
     
