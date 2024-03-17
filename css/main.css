@@ -18,10 +18,10 @@
   --btn-default-hover-bg: #fff;
   --btn-default-hover-color: #222;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #f3f3f3;
-  --highlight-foreground: #444;
-  --highlight-gutter-background: #e1e1e1;
-  --highlight-gutter-foreground: #555;
+  --highlight-background: #eee;
+  --highlight-foreground: #000;
+  --highlight-gutter-background: #d6d6d6;
+  --highlight-gutter-foreground: #171717;
   color-scheme: light;
 }
 html {
@@ -373,114 +373,77 @@ pre code.hljs {
 code.hljs {
   padding: 3px 5px
 }
-/*!
-  Theme: Default
-  Description: Original highlight.js style
-  Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
-  Maintainer: @highlightjs/core-team
-  Website: https://highlightjs.org/
-  License: see project LICENSE
-  Touched: 2021
-*/
 /*
-This is left on purpose making default.css the single file that can be lifted
-as-is from the repository directly without the need for a build step
-
-Typically this "required" baseline CSS is added by `makestuff.js` during build.
+Description: Foundation 4 docs style for highlight.js
+Author: Dan Allen <dan.j.allen@gmail.com>
+Website: http://foundation.zurb.com/docs/
+Version: 1.0
+Date: 2013-04-02
 */
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em
-}
-code.hljs {
-  padding: 3px 5px
-}
-/* end baseline CSS */
 .hljs {
-  background: #F3F3F3;
-  color: #444
+  background: #eee;
+  color: black
 }
-/* Base color: saturation 0; */
-.hljs-subst {
-  /* default */
-  
-}
-/* purposely ignored */
-.hljs-formula,
-.hljs-attr,
-.hljs-property,
-.hljs-params {
-  
-}
-.hljs-comment {
-  color: #697070
-}
-.hljs-tag,
-.hljs-punctuation {
-  color: #444a
-}
-.hljs-tag .hljs-name,
-.hljs-tag .hljs-attr {
-  color: #444
-}
-.hljs-keyword,
-.hljs-attribute,
-.hljs-selector-tag,
-.hljs-meta .hljs-keyword,
-.hljs-doctag,
-.hljs-name {
-  font-weight: bold
-}
-/* User color: hue: 0 */
-.hljs-type,
-.hljs-string,
-.hljs-number,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-quote,
-.hljs-template-tag,
-.hljs-deletion {
-  color: #880000
-}
-.hljs-title,
-.hljs-section {
-  color: #880000;
-  font-weight: bold
-}
-.hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
 .hljs-link,
-.hljs-selector-attr,
-.hljs-operator,
-.hljs-selector-pseudo {
-  color: #ab5656
-}
-/* Language color: hue: 90; */
-.hljs-literal {
-  color: #695
-}
-.hljs-built_in,
-.hljs-bullet,
-.hljs-code,
+.hljs-emphasis,
+.hljs-attribute,
 .hljs-addition {
-  color: #397300
+  color: #070
 }
-/* Meta color: hue: 200 */
-.hljs-meta {
-  color: #1f7199
-}
-.hljs-meta .hljs-string {
-  color: #38a
-}
-/* Misc effects */
 .hljs-emphasis {
   font-style: italic
 }
+.hljs-strong,
+.hljs-string,
+.hljs-deletion {
+  color: #d14
+}
 .hljs-strong {
   font-weight: bold
+}
+.hljs-quote,
+.hljs-comment {
+  color: #998;
+  font-style: italic
+}
+.hljs-section,
+.hljs-title {
+  color: #900
+}
+.hljs-class .hljs-title,
+.hljs-title.class_,
+.hljs-type {
+  color: #458
+}
+.hljs-variable,
+.hljs-template-variable {
+  color: #336699
+}
+.hljs-bullet {
+  color: #997700
+}
+.hljs-meta {
+  color: #3344bb
+}
+.hljs-code,
+.hljs-number,
+.hljs-literal,
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #099
+}
+.hljs-regexp {
+  background-color: #fff0ff;
+  color: #880088
+}
+.hljs-symbol {
+  color: #990073
+}
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #007700
 }
 code,
 kbd,
@@ -1580,45 +1543,33 @@ pre code {
 }
 .back-to-top {
   font-size: 12px;
-  align-items: center;
-  bottom: -100px;
-  color: #fff;
-  display: flex;
-  height: 26px;
-  transition: bottom 0.2s ease-in-out;
-  background: #222;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  z-index: 30;
-  left: 30px;
+  margin: 8px -10px -20px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 .back-to-top span {
   margin-right: 8px;
-  display: none;
 }
 .back-to-top .fa {
   text-align: center;
   width: 26px;
 }
-@media (max-width: 991px) {
-  .back-to-top {
-    left: 20px;
-  }
+.back-to-top.back-to-top-on {
+  cursor: pointer;
+  opacity: 0.8;
 }
-.back-to-top:hover {
+.back-to-top.back-to-top-on:hover {
   opacity: 1;
 }
-@media (max-width: 991px) {
-  .back-to-top {
-    opacity: 1;
-  }
-}
-.back-to-top:hover {
-  color: #87daff;
-}
-.back-to-top.back-to-top-on {
-  bottom: 30px;
+.reading-progress-bar {
+  --progress: 0;
+  background: #37c6c0;
+  height: 3px;
+  position: fixed;
+  z-index: 50;
+  width: var(--progress);
+  left: 0;
+  top: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2537,7 +2488,6 @@ header.header {
 .sidebar {
   background: #222;
   bottom: 0;
-  box-shadow: inset 0 2px 6px #000;
   max-height: 100vh;
   overflow-y: auto;
   position: fixed;
@@ -2565,7 +2515,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #7f6bf2;
+  background: #f591f1;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
